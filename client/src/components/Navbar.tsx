@@ -6,6 +6,7 @@ import { useToast } from '@/hooks/use-toast';
 import { useAuthState } from '@/hooks/useAuth';
 import { useWeb3 } from '@/hooks/useWeb3';
 import GlobalSearch from '@/components/GlobalSearch';
+import Logo from '@/components/Logo';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -25,7 +26,6 @@ import {
 import {
   Menu,
   X,
-  Zap,
   Search,
   Bell,
   User,
@@ -95,14 +95,12 @@ const Navbar = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Button variant="ghost" onClick={() => navigate('/')} className="flex items-center space-x-2 hover:bg-primary/10">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="font-bold text-2xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                W3nity
-              </span>
-            </Button>
+            <Logo 
+              size="lg" 
+              responsive
+              onClick={() => navigate('/')}
+              className="p-2 hover:bg-primary/10 rounded-md transition-colors duration-200"
+            />
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
